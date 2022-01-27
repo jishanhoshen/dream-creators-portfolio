@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin</title>
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <script src="assets/js/jquery.min.js"></script>
+</head>
+
+<body class="dashboard">
+    <div class="mainArea">
+        <div class="navbar">
+            <div class="nav-header">
+                <div class="company">
+                    <h3 class="logo">Dream Creators</h3>
+                </div>
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#" onclick="menucontent(this);" class="menu1"><i class="fas fa-tachometer-alt"></i><span>dashboard</span></a></li>
+                    <li class="nav-item"><a href="#" onclick="menucontent(this);" class="menu2"><i class="fas fa-tasks"></i><span>projects</span></a></li>
+                    <li class="nav-item"><a href="#" onclick="menucontent(this);" class="menu3"><i class="fas fa-project-diagram"></i><span>repository</span></a></li>
+                    <li class="nav-item"><a href="#" onclick="menucontent(this);" class="menu4"><i class="fas fa-id-badge"></i><span>contact</span></a></li>
+                    <li class="nav-item"><a href="#" onclick="menucontent(this);" class="menu5"><i class="fas fa-cog"></i><span>settings</span></a></li>
+                </ul>
+            </div>
+            <div class="nav-footer">
+                <div class="nav-footer-content">
+                    <p>© Copyright 2022 - <a href="#">DC</a></p>
+                    <p>v1.0</p>
+                </div>
+                <a href="#" class="navSwitch"><i class="fas fa-toggle-on"></i></a>
+            </div>
+        </div>
+        <div class="contentArea">
+            <div class="header">
+                <div class="search">
+                    <form>
+                        <input type="search" placeholder="Search" autofocus autocomplete="off" onfocusout="closeinput();">
+                        <i class="fas fa-search search-ico"></i>
+                    </form>
+                </div>
+                <div class="notification"><i class="fas fa-bell"></i></div>
+                <div class="profile">
+                    <img src="assets/img/profile.jpg">
+                    <div class="dropdown">
+                        <ul>
+                            <li><a href="">Profile Edit<i class="fas fa-edit"></i></a></li>
+                            <li><a href="">Logout <i class="fas fa-sign-out-alt"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="mainContainer">
+                <div id="menu1" class="content-area">Dashboard</div>
+                <div id="menu2" class="content-area">Projects</div>
+                <div id="menu3" class="content-area">Repository</div>
+                <div id="menu4" class="content-area">Contact</div>
+                <div id="menu5" class="content-area">Settings</div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
