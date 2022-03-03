@@ -1,9 +1,3 @@
-/* form submittion*/
-// $(function () {
-//     $('form').on('submit', function (e) {
-//         e.preventDefault();
-//     });
-// });
 
 let searchParams = new URLSearchParams(window.location.search)
 var quantity = '';

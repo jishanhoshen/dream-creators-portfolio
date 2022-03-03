@@ -1,9 +1,4 @@
-<p class="messageBox" id="contact-form-message">
-    <span class="message"></span>
-    <span class="messageclose">
-        <i class="fas fa-times"></i>
-    </span>
-</p>
+
     <div id="home" class="hero-area">
         <div class="container hero-contain">
             <div class="content">
@@ -130,7 +125,48 @@
 
         </div>
     </div>
-
+    <div class="teamArea" id="team" style="display:none">
+        <div class="container">
+            <div class="teamContent">
+                <p class="we">Who we are</p>
+                <h1 class="awesome">Awesome Team</h1>
+                <div class="cardArea">
+                    <div class="cardAreaContent">
+                        [team]
+                        <!-- <div class="card" style="background-image: url('/public/assets/img/team.png');">
+                            <div class="name">
+                                <div class="nameContent">
+                                    <h3>John Doe</h3>
+                                    <p>Executive Assistant</p>
+                                    <div class="socialMedia">
+                                        <div class="media">
+                                            <i class="fab fa-facebook facebook"></i>
+                                        </div>
+                                        <div class="media">
+                                            <i class="fab fa-youtube youtube"></i>
+                                        </div>
+                                        <div class="media">
+                                            <i class="fab fa-twitter twitter"></i>
+                                        </div>
+                                        <div class="media">
+                                            <i class="fab fa-instagram instagram"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cardBlur"></div>
+                        </div> -->
+                        <div class="volunteer card">
+                            <img src="/public/assets/img/icon/hand.png" alt="">
+                            <p>Become a volunteer</p>
+                            <h1>Volunteer</h1>
+                            <a href="">Join now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="contact-area" id="contact">
         <div class="container">
             <div class="contact-content">
@@ -224,14 +260,14 @@
                     </div>
                 </div>
                 <div class="contact-form">
-                    <form id="contact-form">
+                    <form>
                         <div class="single-input">
                             <label for="contact-name" class="small">name</label>
                             <div class="input-box">
                                 <div class="ico">
                                     <i class="fas fa-user"></i>
                                 </div>
-                                <input type="text" name="contactname" id="contact-name" placeholder="e.g John Doe"  autocomplete="off">
+                                <input type="text" id="contact-name" placeholder="e.g John Doe"  autocomplete="off">
                             </div>
                         </div>
                         <div class="single-input">
@@ -240,7 +276,7 @@
                                 <div class="ico">
                                     <i class="fas fa-envelope"></i>
                                 </div>
-                                <input type="text" name="contactemail" id="contact-email" placeholder="e.g john.doe@gmail.com" autocomplete="off">
+                                <input type="text" id="contact-email" placeholder="e.g john.doe@gmail.com" autocomplete="off">
                             </div>
                         </div>
                         <div class="single-input">
@@ -249,7 +285,7 @@
                                 <div class="ico">
                                     <i class="fas fa-phone"></i>
                                 </div>
-                                <input type="text" name="contactphone" id="contact-phone" placeholder="e.g +44 0000-000000"  autocomplete="off">
+                                <input type="text" id="contact-phone" placeholder="e.g +44 0000-000000"  autocomplete="off">
                             </div>
                         </div>
                         <div class="single-input">
@@ -258,7 +294,7 @@
                                 <div class="ico">
                                     <i class="fas fa-comments"></i>
                                 </div>
-                                <textarea name="contactmessage" id="contact-message" cols="30" rows="10"
+                                <textarea name="" id="contact-message" cols="30" rows="10"
                                     placeholder="Your Message"  autocomplete="off"></textarea>
                             </div>
                         </div>

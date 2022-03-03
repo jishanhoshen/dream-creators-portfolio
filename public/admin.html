@@ -5,10 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>admin</title>
-    <link rel="stylesheet" href="assets/css/app.css">
-    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
-    <script src="assets/js/jquery.min.js"></script>
+    <title>[pagetitle]</title>
+    <link rel="stylesheet" href="../assets/css/app.css">
+    <link rel="stylesheet" href="../assets/css/dash.css">
+    <link rel="stylesheet" href="../assets/css/fontawesome.css">
+    <script src="../assets/js/jquery.js"></script>
+    [css] 
+    [fontawesome] 
+    [jquery]  
 </head>
 
 <body class="dashboard">
@@ -44,7 +48,7 @@
                 </div>
                 <div class="notification"><i class="fas fa-bell"></i></div>
                 <div class="profile">
-                    <img src="assets/img/profile.jpg">
+                    <img src="[profile]">
                     <div class="dropdown">
                         <ul>
                             <li><a href="">Profile Edit<i class="fas fa-edit"></i></a></li>
@@ -55,14 +59,44 @@
             </div>
             <div class="mainContainer">
                 <div id="menu1" class="content-area">Dashboard</div>
-                <div id="menu2" class="content-area">Projects</div>
+                <section class="admin-box">
+                    <div class="title-area">
+                        <h3>Title Name</h3>
+                    </div>
+                </section>
+                <div id="menu2" class="content-area">
+                    <div class="project-submit-area">
+                        <form action="">
+
+
+                            <div class="title"></div>
+
+
+
+                            <input type="text" class="projectName" placeholder="Project name">
+                            <!-- Creator name from login session -->
+                            <input type="file" placeholder="Images">
+                            <!-- Last update -->
+                            <!-- Published date -->
+                            <input type="file" placeholder="Documentation">
+                            <input type="text" class="short" placeholder="Tags">
+                            <input type="text" class="short" placeholder="Support">
+                            <input type="text" class="short" placeholder="Youtube video link">
+                            <!-- Change log -->
+                            <input type="text" class="short" placeholder="Description">
+                            <input type="file" placeholder="Overview image">
+                            <input type="submit" value="Submit">
+                        </form>
+                    </div>
+                </div>
                 <div id="menu3" class="content-area">Repository</div>
                 <div id="menu4" class="content-area">Contact</div>
                 <div id="menu5" class="content-area">Settings</div>
             </div>
         </div>
     </div>
-    <script src="assets/js/main.js"></script>
+    <script src="../assets/js/main.js"></script>
+    [mainscript]
 </body>
 
 </html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[pagetitle]</title>
+    <!-- <link rel="stylesheet" href="../assets/css/app.css">
+    <link rel="stylesheet" href="../assets/css/dash.css">
+    <link rel="stylesheet" href="../assets/css/fontawesome.css">
+    <script src="../assets/js/jquery.js"></script> -->
+    [css]
+    [fontawesome]
+    [tagifycss]
+    [jquery]
+    [tagify]
+    <script type="text/javascript">
+        function chooseColor() {
+            var mycolor = document.getElementById("myColor").value;
+            document.execCommand('foreColor', false, mycolor);
+        }
+
+        function changeFont() {
+            var myFont = document.getElementById("input-font").value;
+            document.execCommand('fontName', false, myFont);
+        }
+
+        function changeSize() {
+            var mysize = document.getElementById("fontSize").value;
+            document.execCommand('fontSize', false, mysize);
+        }
+
+        function checkDiv() {
+            var editorText = document.getElementById("editor1").innerHTML;
+            if (editorText === '') {
+                document.getElementById("editor1").style.border = '5px solid red';
+            }
+        }
+
+        function removeBorder() {
+            document.getElementById("editor1").style.border = '1px solid transparent';
+        }
+    </script>
+</head>
+
+<body class="dashboard">
+	<div class="preloader"></div>
+    <div class="mainArea">
+        <div class="navbar">
+            <div class="nav-header">
+                <div class="company">
+                    <h3 class="logo">Dream Creators</h3>
+                </div>
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#" onclick="menucontent(this);" class="menu1"><i
+                                class="fas fa-tachometer-alt"></i><span>dashboard</span></a></li>
+                    <li class="nav-item"><a href="#" onclick="menucontent(this);" class="menu2"><i
+                                class="fas fa-tasks"></i><span>projects</span></a></li>
+                    <li class="nav-item"><a href="#" onclick="menucontent(this);" class="menu3"><i
+                                class="fas fa-project-diagram"></i><span>repository</span></a></li>
+                    <li class="nav-item"><a href="#" onclick="menucontent(this);" class="menu4"><i
+                                class="fas fa-id-badge"></i><span>contact</span></a></li>
+                    <li class="nav-item"><a href="#" onclick="menucontent(this);" class="menu5"><i
+                                class="fas fa-cog"></i><span>settings</span></a></li>
+                </ul>
+            </div>
+            <div class="nav-footer">
+                <div class="nav-footer-content">
+                    <p>© Copyright 2022 - <a href="#">DC</a></p>
+                    <p>v1.0</p>
+                </div>
+                <a href="#" class="navSwitch"><i class="fas fa-toggle-on"></i></a>
+            </div>
+        </div>
+        <div class="contentArea">
+            <div class="header">
+                <div class="search">
+                    <form>
+                        <input type="search" placeholder="Search" autofocus autocomplete="off"
+                            onfocusout="closeinput();">
+                        <i class="fas fa-search search-ico"></i>
+                    </form>
+                </div>
+                <div class="notification"><i class="fas fa-bell"></i></div>
+                <div class="profile">
+                    <img src="[profile]">
+                    <div class="dropdown">
+                        <ul>
+                            <li><a href="">Profile Edit<i class="fas fa-edit"></i></a></li>
+                            <li><a href="/logout">Logout <i class="fas fa-sign-out-alt"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="mainContainer">
+                <div id="menu1" class="content-area"></div>
+                <div id="menu2" class="content-area">
+                    <div class="project-submit-area">
+                        <form action="">
+                            <div class="title">
+                                <h2>Project Name</h2>
+                                <input type="text" class="projectName" placeholder="Project name">
+                                <input type="submit" value="Save">
+                            </div>
+                            <div class="project-inputs-area">
+                                <div class="leftside">
+                                    <div class="editor">
+                                        <div class="editor-head">
+                                            <div class="editor-tools">
+                                                <div class="tool fontStyle redo-apply">
+                                                    <button class="fontStyle redo-apply"
+                                                        onclick="document.execCommand( 'redo',false,null);">
+                                                        <i class="fas fa-redo"></i>
+                                                    </button>
+                                                </div>
+                                                <div class="tool fontStyle undo-apply">
+                                                    <button class="fontStyle undo-apply"
+                                                        onclick="document.execCommand( 'undo',false,null);">
+                                                        <i class="fas fa-undo"></i>
+                                                    </button>
+                                                </div>
+                                                <div class="tool fontStyle italic">
+                                                    <button class="fontStyle italic"
+                                                        onclick="document.execCommand('italic',false,null);"
+                                                        title="Italicize Highlighted Text">
+                                                        <i class="fas fa-italic"></i>
+                                                    </button>
+                                                </div>
+                                                <div class="tool fontStyle bold">
+                                                    <button class="fontStyle bold"
+                                                        onclick="document.execCommand( 'bold',false,null);"
+                                                        title="Bold Highlighted Text">
+                                                        <i class="fas fa-bold"></i>
+                                                    </button>
+                                                </div>
+                                                <div class="tool fontStyle underline">
+                                                    <button class="fontStyle underline"
+                                                        onclick="document.execCommand( 'underline',false,null);">
+                                                        <i class="fas fa-underline"></i>
+                                                    </button>
+                                                </div>
+                                                <div class="tool">
+                                                    <select id="input-font" class="input" onchange="changeFont (this);">
+                                                        <option value="Arial">Arial</option>
+                                                        <option value="Helvetica">Helvetica</option>
+                                                        <option value="Times New Roman">Times New Roman</option>
+                                                        <option value="Sans serif">Sans serif</option>
+                                                        <option value="Courier New">Courier New</option>
+                                                        <option value="Verdana">Verdana</option>
+                                                        <option value="Georgia">Georgia</option>
+                                                        <option value="Palatino">Palatino</option>
+                                                        <option value="Garamond">Garamond</option>
+                                                        <option value="Comic Sans MS">Comic Sans MS</option>
+                                                        <option value="Arial Black">Arial Black</option>
+                                                        <option value="Tahoma">Tahoma</option>
+                                                        <option value="Comic Sans MS">Comic Sans MS</option>
+                                                        <option value="Poppins">Poppins</option>
+                                                    </select>
+                                                </div>
+                                                <div class="tool">
+                                                    <select id="fontSize" onclick="changeSize()">
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                        <option value="6">6</option>
+                                                        <option value="7">7</option>
+                                                        <option value="8">8</option>
+                                                    </select>
+                                                </div>
+                                                <div class="tool">
+                                                    <input type="color" onchange="chooseColor()" class="color-apply"
+                                                        id="myColor">
+                                                </div>
+                                                <div class="tool">
+                                                    <button class="fontStyle strikethrough"
+                                                        onclick="document.execCommand( 'strikethrough',false,null);">
+                                                        <i class="fas fa-strikethrough"></i>
+                                                    </button>
+                                                </div>
+                                                <div class="tool">
+                                                    <button class="fontStyle align-left"
+                                                        onclick="document.execCommand( 'justifyLeft',false,null);">
+                                                        <i class="fas fa-align-left"></i>
+                                                    </button>
+                                                </div>
+                                                <div class="tool">
+                                                    <button class="fontStyle align-center"
+                                                        onclick="document.execCommand( 'justifyCenter',false,null);">
+                                                        <i class="fas fa-align-center"></i>
+                                                    </button>
+                                                </div>
+                                                <div class="tool">
+                                                    <button class="fontStyle align-right"
+                                                        onclick="document.execCommand( 'justifyRight',false,null);">
+                                                        <i class="fas fa-align-right"></i>
+                                                    </button>
+                                                </div>
+                                                <div class="tool">
+                                                    <button class="fontStyle orderedlist"
+                                                        onclick="document.execCommand('insertOrderedList', false, null);">
+                                                        <i class="fas fa-list-ul"></i>
+                                                    </button>
+                                                </div>
+                                                <div class="tool">
+                                                    <button class="fontStyle unorderedlist"
+                                                        onclick="document.execCommand('insertUnorderedList',false, null)">
+                                                        <i class="fas fa-list-ol"></i>
+                                                    </button>
+                                                </div>
+                                                <div class="tool ">
+                                                    <button class="fontStyle removeFormat"
+                                                        onclick="document.execCommand('removeFormat',false, null)">
+                                                        <i class="fas fa-remove-format"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="editor" contenteditable="true" data-text="Write here.."></div>
+                                    </div>
+                                </div>
+                                <div class="rightside">
+                                    <!-- Creator name from login session -->
+                                    <label for="productThumbnail">Thumbnail</label>
+                                    <input type="file" placeholder="Images" id="productThumbnail">
+                                    <label for="productReadme">README.md</label>
+                                    <input type="file" placeholder="Documentation" id="productReadme">
+                                    <!-- Last update -->
+                                    <!-- Published date -->
+                                    <label for="youtubelink">Youtube Link</label>
+                                    <input type="text" class="short" placeholder="https://www.youtube.com/watch?"
+                                        id="youtubelink">
+                                    <label for="tags">Tags</label>
+                                    <textarea name='tags2' placeholder='Tags' id="tags"></textarea>
+                                    <!-- Change log -->
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div id="menu3" class="content-area">Repository</div>
+                <div id="menu4" class="content-area">Contact</div>
+                <div id="menu5" class="content-area">Settings</div>
+            </div>
+        </div>
+    </div>
+    <!-- <script src="../assets/js/main.js"></script> -->
+    [mainscript]
+</body>
+
+</html>
